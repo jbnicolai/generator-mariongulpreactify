@@ -1,0 +1,38 @@
+{
+  "name": "generator-mariongulpreactify",
+  "version": "0.1.2",
+  "description": "Yeoman generator involving Marionette, React, Gulp and Browserify",
+  "license": "MIT",
+  "repository": "dqdinh/generator-mariongulpreactify",
+  "author": {
+    "name": "dave dinh",
+    "email": "dqdinh@gmail.com",
+    "url": "https://github.com/dqdinh"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+ "keywords": [
+    "yeoman-generator",
+    "marionette",
+    "backbone",
+    "react",
+    "gulp",
+    "browserify",
+    "web",
+    "front-end"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.17.2",
+    "coffee-script": "~1.7.1",
+    "underscore.string": "~2.3.3",
+    "chalk": "~0.5.1"
+  },
+  "devDependencies": {
+    "generator-buster": "~0.0.1",
+    "yosay": "~1.0.0"
+  },
+ "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}

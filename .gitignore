@@ -1,0 +1,6 @@
+.DS_Store
+.yo-rc.json
+npm-debug.log
+Desktop.ini
+node_modules
+tmp/
