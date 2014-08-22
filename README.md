@@ -30,12 +30,12 @@ This generator relies on the following technologies:
 - [Handlebars](http://handlebarsjs.com/)
 - [React](http://facebook.github.io/react/) | Workflow integration coming soon!
 
-## Getting Started
+## Run the generator
 
 - Install locally: `npm link`
 - Run: `yo mariongulpreactify`
 
-### Inside your new app:
+## Inside your new app
 
 If you've never used Node or npm before, you'll need to install Node.
 If you use homebrew, do:
