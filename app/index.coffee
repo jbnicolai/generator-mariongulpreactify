@@ -2,7 +2,7 @@ yeoman = require("yeoman-generator")
 yosay = require("yosay")
 chalk = require("chalk")
 
-module.exports = class Generator extends yeoman.generators.Base
+module.exports = yeoman.generators.Base.extend
   constructor: ->
     yeoman.generators.Base.apply this, arguments
 
@@ -13,27 +13,20 @@ module.exports = class Generator extends yeoman.generators.Base
     prompts = [
       {
         type: "input"
-        name: "moduleName"
+        name: "appname"
         message: "What's your module name?"
-      },
-      {
-        type: "input"
-        name: "rootDir"
-        message: "What's your root directory?"
       }
     ]
 
     @prompt prompts, ((answers) ->
-      @moduleName = answers.moduleName
-      @rootDir = answers.rootDir
+      @appname = answers.appname
       done()
     ).bind(this)
 
   configuring: ->
     @config.set
-      moduleName: @moduleName
-      rootDir: @rootDir
+      appname: @appname
 
   writing:
     writeModules: ->
-      @directory "app/", @rootDir + @moduleName
+      @directory "src", @appname
