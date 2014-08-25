@@ -10,7 +10,7 @@ module.exports =
 
   initializeHeaders: ->
     headers = new HeaderCollection([
-      { name: "Support Page", url: "support/search", navigationTrigger: "" }
+      { name: "App", url: "", navigationTrigger: "" }
     ])
 
   getHeaders: ->

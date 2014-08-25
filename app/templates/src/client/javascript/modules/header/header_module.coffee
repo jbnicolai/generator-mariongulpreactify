@@ -4,7 +4,7 @@ HeaderController = require './header_controller'
 module.exports = class HeaderModule extends Marionette.Module
   onStart: ->
     @startMediator()
-    @controller.setActiveHeader("support/search")
+    @controller.setActiveHeader("")
 
   startMediator: ->
     @controller = new HeaderController

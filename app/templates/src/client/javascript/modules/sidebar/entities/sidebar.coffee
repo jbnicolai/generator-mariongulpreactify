@@ -10,7 +10,7 @@ module.exports =
 
   initializeSidebars: ->
     sidebars = new SidebarCollection([
-      { name: "Change this to the name of your App", url: "", navigationTrigger: "" }
+      { name: "App", url: "", navigationTrigger: "" }
     ])
 
   getSidebars: ->
