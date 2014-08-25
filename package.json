@@ -1,6 +1,6 @@
 {
   "name": "generator-mariongulpreactify",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Yeoman generator for an app starter using Marionette, React, Gulp and Browserify",
   "license": "MIT",
   "repository": "dqdinh/generator-mariongulpreactify",
