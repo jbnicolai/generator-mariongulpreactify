@@ -1,20 +1,16 @@
 Mariongulpreactify Generator
 ==================
-### Notice
-
-Early stage of development, so use with caution.
-
 ## Features
 
 * Require() modules with Browserify
 * Watchify for super fast browserify rebuilds
-* Gulp
+* Gulp tasks
 * Built-in static server with BrowserSync
 * compiles CoffeeScript
 * compile Less or CSS
 * image optimization
 * Shim browser dependencies with browserify-shim
-- Error Notifications in Notification Center
+* Error Notifications in Notification Center
 
 ## Tooling
 
