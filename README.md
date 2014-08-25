@@ -28,7 +28,7 @@ This generator relies on the following technologies:
 
 ## Run the generator
 
-- Install locally: `npm link`
+- Install: npm install -g mariongulpreactify
 - Run: `yo mariongulpreactify`
 
 ## Inside your new app
