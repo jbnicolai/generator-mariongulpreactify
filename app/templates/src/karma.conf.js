@@ -19,13 +19,13 @@ module.exports = {
   // source files, that you wanna generate coverage for
   // do not include tests or libraries
   // (these files will be instrumented by Istanbul)
-    'client/**/*.coffee': ['coverage']
+  //'test/**/*.coffee': ['coverage']
   },
 
   // use dots reporter, as travis terminal does not support escaping sequences
   // possible values: 'dots', 'progress'
   // CLI --reporters progress
-  reporters: ['mocha', 'coverage'],
+  reporters: ['mocha'],
 
   // web server port
   // CLI --port 9876
@@ -59,10 +59,10 @@ module.exports = {
   // CLI --single-run --no-single-run
   singleRun: false,
   // optionally, configure the reporter
-  coverageReporter: {
-  type : 'text',
-    dir : 'coverage/'
-  },
+  //coverageReporter: {
+  //type : 'text',
+    //dir : 'coverage/'
+  //},
 
   // report which specs are slower than 500ms
   // CLI --report-slower-than 500
@@ -71,7 +71,6 @@ module.exports = {
   plugins: [
     'karma-mocha',
     'karma-chai',
-    "karma-coverage",
     "karma-phantomjs-launcher",
     "karma-mocha-reporter",
   ]

@@ -14,14 +14,17 @@ var handleErrors = require('../util/handleErrors');
 var source       = require('vinyl-source-stream');
 
 gulp.task('browserifyTests', function() {
+  var dest = './build/test/';
 
-  var bundleMethod = global.isWatching ? watchify : browserify;
-
-  var bundler = bundleMethod({
+  var bundler = browserify({
+    // Required watchify args
+    cache: {}, packageCache: {}, fullPaths: true,
     // Specify the entry point of your app
     entries: ['./test/init.coffee'],
     // Add file extentions to make optional in your requires
-    extensions: ['.coffee', '.hbs']
+    extensions: ['.coffee', '.hbs'],
+    // Enable source maps.
+    debug: true
   });
 
   var bundle = function() {
@@ -29,8 +32,7 @@ gulp.task('browserifyTests', function() {
     bundleLogger.start();
 
     return bundler
-      // Enable source maps!
-      .bundle({debug: true})
+      .bundle()
       // Report compile errors
       .on('error', handleErrors)
       // Use vinyl-source-stream to make the
@@ -38,14 +40,15 @@ gulp.task('browserifyTests', function() {
       // desired output filename here.
       .pipe(source('app.js'))
       // Specify the output destination
-      .pipe(gulp.dest('./build/test/'))
+      .pipe(gulp.dest(dest))
       // Log when bundling completes!
       .on('end', bundleLogger.end);
   };
 
   if(global.isWatching) {
+    bundler = watchify(bundler);
     // Rebundle with watchify on changes.
-  bundler.on('update', bundle);
+    bundler.on('update', bundle);
   }
 
   return bundle();
