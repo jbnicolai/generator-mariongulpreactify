@@ -1,5 +1,5 @@
 ###
-  Main app that holds all admin panel modules.
+  Main app that coordinates various Marionette modules.
 ###
 
 Backbone = require 'backbone'
@@ -8,7 +8,7 @@ Marionette = require 'backbone.marionette'
 Radio = require './radio'
 require './common/hbs_helpers'
 
-# Require specific admin panel modules below.
+# Require specific modules below.
 HeaderModule = require './modules/header/header_module'
 SidebarModule = require './modules/sidebar/sidebar_module'
 
@@ -27,8 +27,7 @@ App.startModule = (moduleName, args) ->
 App.getCurrentRoute = ->
   Backbone.history.fragment
 
-# Primary regions for the header and admin page
-# modules.
+# Primary regions for the header, sidebar, and modules.
 App.addRegions
   headerRegion: "#header-region"
   sidebarRegion: "#sidebar-region"
